@@ -1,0 +1,159 @@
+.logo {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(-1px);
+
+    .iconContainer {
+      transform: scale(1.05);
+    }
+
+    .heartbeat {
+      animation: pulse 1.5s ease-in-out infinite;
+    }
+  }
+
+  .iconContainer {
+    position: relative;
+    transition: transform 0.3s ease;
+
+    .icon {
+      width: 40px;
+      height: 40px;
+
+      .cross {
+        fill: url(#crossGradient);
+        transition: all 0.3s ease;
+      }
+
+      .heartbeat {
+        opacity: 0.8;
+        transition: all 0.3s ease;
+      }
+    }
+  }
+
+  .textContainer {
+    margin-left: 12px;
+    display: flex;
+    flex-direction: column;
+
+    .text {
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 1;
+      margin: 0;
+
+      .medi {
+        background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .wise {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+    }
+
+    .tagline {
+      font-size: 10px;
+      color: #8c8c8c;
+      margin: 0;
+      letter-spacing: 1px;
+      font-weight: 400;
+    }
+  }
+
+  // 尺寸变体
+  &.small {
+    .iconContainer .icon {
+      width: 28px;
+      height: 28px;
+    }
+
+    .textContainer {
+      margin-left: 8px;
+
+      .text {
+        font-size: 18px;
+      }
+
+      .tagline {
+        font-size: 8px;
+      }
+    }
+  }
+
+  &.large {
+    .iconContainer .icon {
+      width: 48px;
+      height: 48px;
+    }
+
+    .textContainer {
+      margin-left: 16px;
+
+      .text {
+        font-size: 28px;
+      }
+
+      .tagline {
+        font-size: 12px;
+      }
+    }
+  }
+
+  // 主题变体
+  &.dark {
+    .textContainer {
+      .text {
+        .medi {
+          background: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+        }
+
+        .wise {
+          background: linear-gradient(135deg, #a29bfe 0%, #6c5ce7 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+        }
+      }
+
+      .tagline {
+        color: rgba(255, 255, 255, 0.7);
+      }
+    }
+  }
+}
+
+// 动画效果
+@keyframes pulse {
+  0%, 100% {
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 1;
+    stroke-width: 3;
+  }
+}
+
+// 响应式设计
+@media (max-width: 768px) {
+  .logo {
+    .textContainer {
+      .tagline {
+        display: none;
+      }
+    }
+  }
+}

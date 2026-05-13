@@ -1,0 +1,35 @@
+# IDE
+.idea/
+*.iml
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Backend
+backend/target/
+backend/.idea/
+backend/*.iml
+backend/.env*
+backend/application-local.yml
+backend/application-*.secrets.yml
+backend/*.local.properties
+backend/*.secrets.yml
+
+# Frontend
+vite-project/node_modules/
+vite-project/dist/
+vite-project/.idea/
+vite-project/*.local
+vite-project/.env.local
+vite-project/.env.*.local
+vite-project/tsconfig.tsbuildinfo
+vite-project/tsconfig.node.tsbuildinfo
+vite-project/vite.config.d.ts
+
+# Trae
+.trae/
+
+# Logs
+*.log

@@ -1,0 +1,22 @@
+admin:
+  username: admin
+  password: your-admin-password
+  nickname: 管理员
+  email: admin@example.com
+  phone: 13800000000
+jwt:
+  secret: your-jwt-secret-at-least-256-bits
+  expire-time: 86400000
+aliyun:
+  oss:
+    endpoint: oss-cn-shanghai.aliyuncs.com
+    access-key-id: your-aliyun-access-key-id
+    access-key-secret: your-aliyun-access-key-secret
+    bucket-name: your-bucket-name
+
+tongyi:
+  api-key: your-tongyi-api-key
+  model: qwen-max
+  max-tokens: 2000
+  temperature: 0.7
+  enable-stream: false

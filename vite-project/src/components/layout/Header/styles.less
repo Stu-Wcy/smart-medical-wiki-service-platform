@@ -1,0 +1,102 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  padding: 0;
+  height: 64px;
+  line-height: 64px;
+
+  .header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    margin-right: 48px;
+    cursor: pointer;
+
+    img {
+      height: 32px;
+      margin-right: 8px;
+    }
+
+    h1 {
+      margin: 0;
+      color: #1890ff;
+      font-size: 18px;
+      font-weight: 600;
+    }
+  }
+
+  .ant-menu {
+    flex: 1;
+    border-bottom: none;
+    background: transparent;
+  }
+
+  .search-bar {
+    margin: 0 24px;
+    width: 320px;
+
+    .ant-input-search {
+      .ant-input {
+        border-radius: 20px;
+      }
+      
+      .ant-input-search-button {
+        border-radius: 0 20px 20px 0;
+      }
+    }
+  }
+
+  .header-right {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+
+    .cart-icon {
+      font-size: 20px;
+      cursor: pointer;
+      color: #666;
+      transition: color 0.3s;
+
+      &:hover {
+        color: #1890ff;
+      }
+    }
+
+    .user-info {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      padding: 0 8px;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.025);
+      }
+
+      .ant-avatar {
+        margin-right: 8px;
+      }
+
+      .username {
+        color: #666;
+        max-width: 100px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+    }
+  }
+} 

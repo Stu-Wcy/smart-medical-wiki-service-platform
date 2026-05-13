@@ -1,0 +1,688 @@
+.medicineDetail {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px;
+  background: #f8f9fa;
+  min-height: 100vh;
+
+  // 面包屑导航
+  .breadcrumb {
+    background: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+
+    .breadcrumbLink {
+      color: #1890ff;
+      cursor: pointer;
+      transition: color 0.3s;
+
+      &:hover {
+        color: #40a9ff;
+      }
+    }
+  }
+
+  // 主卡片
+  .mainCard {
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    margin-bottom: 16px;
+    overflow: hidden;
+    background: white;
+
+    :global(.ant-card-body) {
+      padding: 24px;
+    }
+  }
+
+  // 图片区域
+  .gallery {
+    .imageContainer {
+      position: relative;
+      background: #fafafa;
+      border-radius: 8px;
+      overflow: hidden;
+      border: 1px solid #f0f0f0;
+    }
+
+    .carousel {
+      .imageWrapper {
+        width: 100%;
+        height: 400px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #fafafa;
+
+        .image {
+          max-width: 100%;
+          max-height: 100%;
+          object-fit: contain;
+          border-radius: 4px;
+        }
+      }
+    }
+
+    .carouselDots {
+      :global(.ant-carousel-dot) {
+        width: 8px;
+        height: 8px;
+
+        button {
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          background: rgba(0, 0, 0, 0.3);
+        }
+
+        &.ant-carousel-dot-active button {
+          background: #1890ff;
+        }
+      }
+    }
+
+    .imageCount {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      background: rgba(0, 0, 0, 0.6);
+      color: white;
+      padding: 2px 8px;
+      border-radius: 12px;
+      font-size: 12px;
+    }
+
+    .noImage {
+      width: 100%;
+      height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #fafafa;
+      border-radius: 8px;
+      border: 1px dashed #d9d9d9;
+    }
+  }
+
+  // 图片下方的药品信息
+  .medicineInfoBelow {
+    margin-top: 20px;
+
+    .descriptionSection,
+    .usageSection,
+    .warningSection {
+      margin-bottom: 20px;
+      padding: 16px;
+      background: white;
+      border-radius: 8px;
+      border: 1px solid #f0f0f0;
+
+      .sectionTitle {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 16px;
+        font-weight: 600;
+        color: #262626;
+        margin: 0 0 12px 0;
+
+        .sectionIcon {
+          font-size: 16px;
+          color: #1890ff;
+        }
+      }
+
+      .descriptionContent,
+      .usageContent {
+        color: #595959;
+        line-height: 1.6;
+        font-size: 14px;
+        white-space: pre-wrap;
+      }
+
+      .warningContent {
+        color: #ff4d4f;
+        line-height: 1.6;
+        font-size: 14px;
+        white-space: pre-wrap;
+        background: #fff2f0;
+        padding: 12px;
+        border-radius: 6px;
+        border: 1px solid #ffccc7;
+      }
+    }
+
+    .warningSection {
+      .sectionIcon {
+        color: #ff4d4f;
+      }
+    }
+  }
+
+  // 产品信息区域
+  .productInfo {
+    .titleSection {
+      margin-bottom: 16px;
+
+      .productTitle {
+        font-size: 24px;
+        font-weight: 600;
+        color: #262626;
+        margin: 0 0 8px 0;
+        line-height: 1.4;
+      }
+
+      .titleActions {
+        display: flex;
+        gap: 8px;
+        margin-top: 8px;
+
+        .actionBtn {
+          color: #8c8c8c;
+          border: 1px solid #d9d9d9;
+          border-radius: 4px;
+          font-size: 12px;
+          height: 28px;
+          padding: 0 8px;
+
+          &:hover {
+            color: #1890ff;
+            border-color: #1890ff;
+          }
+        }
+      }
+    }
+
+    .ratingSection {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 20px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid #f0f0f0;
+
+      .rating {
+        font-size: 14px;
+      }
+
+      .ratingText {
+        color: #8c8c8c;
+        font-size: 12px;
+      }
+
+      .categoryTag {
+        margin-left: auto;
+        font-size: 12px;
+      }
+    }
+
+    .priceSection {
+      background: #fff2f0;
+      padding: 16px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      border: 1px solid #ffccc7;
+
+      .currentPrice {
+        display: flex;
+        align-items: baseline;
+        margin-bottom: 8px;
+
+        .priceSymbol {
+          font-size: 16px;
+          color: #ff4d4f;
+          font-weight: 500;
+        }
+
+        .priceAmount {
+          font-size: 28px;
+          font-weight: 700;
+          color: #ff4d4f;
+          margin-left: 2px;
+        }
+      }
+
+      .priceInfo {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        .originalPrice {
+          color: #8c8c8c;
+          text-decoration: line-through;
+          font-size: 12px;
+        }
+
+        .discountTag {
+          font-size: 10px;
+          padding: 1px 4px;
+        }
+      }
+    }
+
+    .basicInfo {
+      margin-bottom: 20px;
+
+      .infoItem {
+        display: flex;
+        align-items: center;
+        padding: 8px 0;
+        border-bottom: 1px solid #f0f0f0;
+
+        &:last-child {
+          border-bottom: none;
+        }
+
+        .infoLabel {
+          color: #8c8c8c;
+          font-size: 13px;
+          width: 80px;
+          flex-shrink: 0;
+        }
+
+        .infoValue {
+          color: #262626;
+          font-size: 13px;
+          font-weight: 500;
+
+          &.stockHigh {
+            color: #52c41a;
+          }
+
+          &.stockLow {
+            color: #ff4d4f;
+          }
+        }
+      }
+    }
+
+    .purchaseSection {
+      background: #fafafa;
+      padding: 16px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+
+      .quantitySelector {
+        display: flex;
+        align-items: center;
+        margin-bottom: 12px;
+
+        .quantityLabel {
+          color: #262626;
+          font-weight: 500;
+          margin-right: 8px;
+          font-size: 14px;
+        }
+
+        .quantityInput {
+          margin-right: 6px;
+          border-radius: 4px;
+          width: 80px;
+        }
+
+        .quantityUnit {
+          color: #8c8c8c;
+          font-size: 12px;
+        }
+      }
+
+      .totalPrice {
+        display: flex;
+        align-items: center;
+        margin-bottom: 16px;
+        padding: 8px 0;
+        border-top: 1px solid #e8e8e8;
+        border-bottom: 1px solid #e8e8e8;
+
+        .totalLabel {
+          color: #262626;
+          font-size: 14px;
+          font-weight: 500;
+        }
+
+        .totalAmount {
+          color: #ff4d4f;
+          font-size: 18px;
+          font-weight: 700;
+          margin-left: auto;
+        }
+      }
+
+      .actionButtons {
+        display: flex;
+        gap: 12px;
+
+        .addToCartBtn,
+        .buyNowBtn {
+          flex: 1;
+          height: 40px;
+          border-radius: 6px;
+          font-size: 14px;
+          font-weight: 500;
+          transition: all 0.2s ease;
+        }
+
+        .addToCartBtn {
+          border-color: #1890ff;
+          color: #1890ff !important;
+          background: white;
+
+          &:hover {
+            background: #1890ff !important;
+            color: white !important;
+            border-color: #1890ff;
+          }
+        }
+
+        .buyNowBtn {
+          background: #ff4d4f;
+          border-color: #ff4d4f;
+
+          &:hover {
+            background: #ff7875;
+            border-color: #ff7875;
+          }
+        }
+      }
+    }
+
+    .serviceSection {
+      display: flex;
+      justify-content: space-around;
+      padding: 12px 0;
+      border-top: 1px solid #f0f0f0;
+
+      .serviceItem {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 4px;
+        color: #8c8c8c;
+        font-size: 12px;
+
+        .serviceIcon {
+          font-size: 18px;
+          color: #1890ff;
+        }
+      }
+    }
+  }
+
+  // 详情区域
+  .detailSection {
+    .detailCard {
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+      background: white;
+
+      :global(.ant-card-body) {
+        padding: 20px;
+      }
+    }
+
+    .detailTabs {
+      .tabHeader {
+        margin-bottom: 20px;
+        padding-bottom: 12px;
+        border-bottom: 1px solid #f0f0f0;
+
+        h3 {
+          font-size: 18px;
+          font-weight: 600;
+          color: #262626;
+          margin: 0;
+        }
+      }
+
+      .detailItem {
+        margin-bottom: 24px;
+
+        &.warningItem {
+          background: #fff2f0;
+          padding: 16px;
+          border-radius: 8px;
+          border: 1px solid #ffccc7;
+
+          .detailTitle {
+            color: #cf1322;
+          }
+
+          .detailContent {
+            color: #a8071a;
+          }
+        }
+
+        .detailTitle {
+          display: flex;
+          align-items: center;
+          gap: 6px;
+          font-size: 16px;
+          font-weight: 600;
+          color: #262626;
+          margin-bottom: 12px;
+
+          .detailIcon {
+            font-size: 16px;
+          }
+        }
+
+        .detailContent {
+          color: #595959;
+          line-height: 1.6;
+          font-size: 14px;
+          white-space: pre-wrap;
+        }
+
+        .infoGrid {
+          display: grid;
+          grid-template-columns: 1fr;
+          gap: 12px;
+
+          @media (min-width: 768px) {
+            grid-template-columns: 1fr 1fr;
+          }
+
+          .infoGridItem {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 12px;
+            background: #fafafa;
+            border-radius: 6px;
+            border: 1px solid #f0f0f0;
+
+            .gridLabel {
+              color: #8c8c8c;
+              font-size: 13px;
+            }
+
+            .gridValue {
+              color: #262626;
+              font-weight: 500;
+              font-size: 13px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // 返回按钮
+  .backToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+
+    .backBtn {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+      border: none;
+      background: #1890ff;
+
+      &:hover {
+        background: #40a9ff;
+      }
+
+      :global(.anticon) {
+        font-size: 16px;
+      }
+    }
+  }
+
+  // 响应式设计
+  @media (max-width: 768px) {
+    padding: 12px;
+
+    .mainCard {
+      :global(.ant-card-body) {
+        padding: 16px;
+      }
+    }
+
+    .gallery {
+      .carousel {
+        .imageWrapper {
+          height: 300px;
+        }
+      }
+
+      .noImage {
+        height: 300px;
+      }
+    }
+
+    .medicineInfoBelow {
+      margin-top: 16px;
+
+      .descriptionSection,
+      .usageSection,
+      .warningSection {
+        margin-bottom: 16px;
+        padding: 12px;
+
+        .sectionTitle {
+          font-size: 14px;
+          margin-bottom: 8px;
+
+          .sectionIcon {
+            font-size: 14px;
+          }
+        }
+
+        .descriptionContent,
+        .usageContent,
+        .warningContent {
+          font-size: 13px;
+        }
+
+        .warningContent {
+          padding: 8px;
+        }
+      }
+    }
+
+    .productInfo {
+      .titleSection {
+        .productTitle {
+          font-size: 20px;
+        }
+      }
+
+      .priceSection {
+        .currentPrice {
+          .priceAmount {
+            font-size: 24px;
+          }
+        }
+      }
+
+      .purchaseSection {
+        padding: 12px;
+
+        .actionButtons {
+          flex-direction: column;
+          gap: 8px;
+
+          .addToCartBtn,
+          .buyNowBtn {
+            height: 36px;
+            font-size: 13px;
+          }
+        }
+      }
+
+      .serviceSection {
+        .serviceItem {
+          font-size: 11px;
+
+          .serviceIcon {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+
+    .detailSection {
+      .detailCard {
+        :global(.ant-card-body) {
+          padding: 16px;
+        }
+      }
+
+      .detailTabs {
+        .detailItem {
+          margin-bottom: 20px;
+
+          .detailTitle {
+            font-size: 14px;
+          }
+
+          .detailContent {
+            font-size: 13px;
+          }
+
+          .infoGrid {
+            grid-template-columns: 1fr;
+            gap: 8px;
+
+            .infoGridItem {
+              padding: 8px 10px;
+
+              .gridLabel,
+              .gridValue {
+                font-size: 12px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .backToTop {
+      bottom: 16px;
+      right: 16px;
+
+      .backBtn {
+        width: 40px;
+        height: 40px;
+
+        :global(.anticon) {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+
+.loading {
+  width: 100%;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

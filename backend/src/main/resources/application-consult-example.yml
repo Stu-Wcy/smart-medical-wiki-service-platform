@@ -1,0 +1,7 @@
+mail:
+  smtp:
+    host: smtp.qq.com
+    port: 587
+    ssl: true
+    username: ${MAIL_USERNAME:your-email@qq.com}
+    password: ${MAIL_PASSWORD:your-smtp-password}

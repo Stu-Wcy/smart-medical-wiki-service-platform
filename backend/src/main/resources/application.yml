@@ -1,0 +1,27 @@
+# 管理员配置
+admin:
+  username: ${ADMIN_USERNAME:admin}
+  password: ${ADMIN_PASSWORD:changeme}
+  nickname: 管理员
+  email: admin@example.com
+  phone: 13800000000
+
+# JWT配置
+jwt:
+  secret: ${JWT_SECRET}
+  expire-time: ${JWT_EXPIRE_MS:86400000}
+
+aliyun:
+  oss:
+    endpoint: ${ALIYUN_OSS_ENDPOINT:oss-cn-shanghai.aliyuncs.com}
+    access-key-id: ${ALIYUN_OSS_ACCESS_KEY_ID}
+    access-key-secret: ${ALIYUN_OSS_ACCESS_KEY_SECRET}
+    bucket-name: ${ALIYUN_OSS_BUCKET_NAME}
+
+# 通义千问配置
+tongyi:
+  api-key: ${TONGYI_API_KEY}
+  model: ${TONGYI_MODEL:qwen-max}
+  max-tokens: ${TONGYI_MAX_TOKENS:2000}
+  temperature: ${TONGYI_TEMPERATURE:0.7}
+  enable-stream: ${TONGYI_ENABLE_STREAM:false}

@@ -1,0 +1,126 @@
+.header {
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  padding: 0;
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .logo {
+    height: 64px;
+    padding: 16px 0;
+    margin-right: 40px;
+
+    a {
+      display: flex;
+      align-items: center;
+      height: 100%;
+    }
+  }
+
+  .menu {
+    flex: 1;
+    border-bottom: none;
+    background: transparent;
+
+    :global {
+      .ant-menu-item {
+        font-size: 16px;
+        padding: 0 20px;
+
+        &::after {
+          display: none;
+        }
+
+        a {
+          color: #333;
+          transition: color 0.3s;
+
+          &:hover {
+            color: #1890ff;
+          }
+        }
+      }
+
+      .ant-menu-item-selected {
+        a {
+          color: #1890ff;
+        }
+      }
+    }
+  }
+
+  .actions {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+
+    .cartLink {
+      display: flex;
+      align-items: center;
+      color: #666;
+      transition: color 0.3s;
+
+      .anticon {
+        font-size: 20px;
+        margin-right: 4px;
+      }
+
+      &:hover {
+        color: #1890ff;
+      }
+    }
+
+    .userInfo {
+      cursor: pointer;
+      padding: 4px 8px;
+      border-radius: 4px;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.02);
+      }
+
+      .anticon {
+        color: #666;
+      }
+
+      span {
+        color: #333;
+        margin-left: 8px;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .container {
+      padding: 0 16px;
+    }
+
+    .logo span {
+      display: none;
+    }
+
+    .menu {
+      display: none;
+    }
+
+    .actions {
+      gap: 16px;
+
+      .cartLink span {
+        display: none;
+      }
+    }
+  }
+} 

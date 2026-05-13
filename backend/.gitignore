@@ -1,0 +1,9 @@
+.idea/
+target/
+*.iml
+*.log
+.env*
+application-local.yml
+application-*.secrets.yml
+*.local.properties
+*.secrets.yml

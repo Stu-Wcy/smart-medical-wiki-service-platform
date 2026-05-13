@@ -1,0 +1,240 @@
+.diseaseDetail {
+  max-width: 1200px;
+  margin: 24px auto;
+  padding: 0 16px;
+
+  :global {
+    .ant-card {
+      border-radius: 0;
+      box-shadow: 0 1px 4px rgba(0, 21, 41, 0.08);
+      border: 1px solid #e8e8e8;
+    }
+
+    .ant-card-body {
+      padding: 0;
+    }
+  }
+
+  .header {
+    background: #1890ff;
+    padding: 16px 24px;
+    color: white;
+
+    :global {
+      .ant-breadcrumb {
+        font-size: 14px;
+
+        .ant-breadcrumb-link,
+        .ant-breadcrumb-separator {
+          color: rgba(255, 255, 255, 0.85);
+        }
+
+        a {
+          display: flex;
+          align-items: center;
+          color: white;
+          text-decoration: none;
+          transition: color 0.3s;
+
+          &:hover {
+            color: rgba(255, 255, 255, 0.8);
+          }
+
+          .anticon {
+            margin-right: 6px;
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+
+  .content {
+    padding: 24px;
+
+    .title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 24px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid #e8e8e8;
+
+      h1 {
+        margin: 0;
+        font-size: 24px;
+        color: #262626;
+        font-weight: 600;
+      }
+
+      :global {
+        .ant-tag {
+          font-size: 12px;
+          padding: 4px 8px;
+          border-radius: 0;
+          border: 1px solid #d9d9d9;
+          font-weight: normal;
+        }
+      }
+    }
+
+    .images {
+      margin-bottom: 24px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+
+      :global {
+        .ant-image {
+          border-radius: 0;
+          border: 1px solid #e8e8e8;
+          transition: border-color 0.3s;
+
+          &:hover {
+            border-color: #1890ff;
+          }
+
+          img {
+            object-fit: cover;
+          }
+        }
+      }
+    }
+
+    .section {
+      margin-bottom: 24px;
+      background: #fff;
+      border: 1px solid #e8e8e8;
+
+      :global {
+        .ant-divider {
+          margin: 0;
+          padding: 12px 16px;
+          background: #fafafa;
+          color: #262626;
+          font-weight: 500;
+          font-size: 16px;
+          border-bottom: 1px solid #e8e8e8;
+
+          &::before,
+          &::after {
+            display: none;
+          }
+        }
+      }
+
+      .sectionContent {
+        color: #595959;
+        line-height: 1.6;
+        font-size: 14px;
+        padding: 16px;
+        background: #fff;
+
+        :global {
+          p {
+            margin-bottom: 8px;
+
+            &:last-child {
+              margin-bottom: 0;
+            }
+          }
+
+          br {
+            line-height: 1.8;
+          }
+        }
+      }
+    }
+  }
+
+  // 平板样式
+  @media (max-width: 1024px) {
+    margin: 16px;
+
+    .content {
+      padding: 20px;
+
+      .title {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+
+        h1 {
+          font-size: 22px;
+        }
+      }
+
+      .images {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 12px;
+      }
+    }
+  }
+
+  // 手机样式
+  @media (max-width: 768px) {
+    margin: 8px;
+
+    .header {
+      padding: 12px 16px;
+    }
+
+    .content {
+      padding: 16px;
+
+      .title {
+        margin-bottom: 20px;
+        padding-bottom: 12px;
+
+        h1 {
+          font-size: 20px;
+        }
+      }
+
+      .images {
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        gap: 8px;
+        margin-bottom: 20px;
+      }
+
+      .section {
+        margin-bottom: 20px;
+
+        :global {
+          .ant-divider {
+            padding: 10px 12px;
+            font-size: 15px;
+          }
+        }
+
+        .sectionContent {
+          padding: 12px;
+          font-size: 13px;
+        }
+      }
+    }
+  }
+
+  // 小屏手机样式
+  @media (max-width: 480px) {
+    .content {
+      .images {
+        grid-template-columns: 1fr;
+      }
+
+      .section {
+        :global {
+          .ant-divider {
+            padding: 8px 12px;
+            font-size: 14px;
+          }
+        }
+
+        .sectionContent {
+          padding: 12px;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}

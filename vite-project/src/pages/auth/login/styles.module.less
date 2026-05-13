@@ -1,0 +1,129 @@
+.loginPage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  //background-image: url('@/assets/images/background.jpg');
+  //background-size: cover;
+  //background-position: center;
+  //background-repeat: no-repeat;
+  //background-attachment: fixed;
+  //overflow: hidden;
+  //
+  //&::before {
+  //  content: '';
+  //  position: absolute;
+  //  top: 0;
+  //  left: 0;
+  //  right: 0;
+  //  bottom: 0;
+  //  background-color: rgba(0, 0, 0, 0.4);
+  //}
+  //background-image: url('@/assets/images/background.jpg') ;
+  background-color: red;
+  //width: 1000px;
+  //height: 100vh;
+  //flex: 1;
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 400px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8px);
+  padding: 32px;
+  transition: all 0.3s ease;
+  margin: 24px;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 48px rgba(0, 0, 0, 0.15);
+  }
+
+  .header {
+    text-align: center;
+    margin-bottom: 32px;
+
+    h2 {
+      font-size: 28px;
+      color: #1a1a1a;
+      margin-bottom: 8px;
+      font-weight: 600;
+    }
+
+    p {
+      font-size: 16px;
+      color: #666;
+      margin: 0;
+    }
+  }
+
+  .form {
+    :global {
+      .ant-form-item {
+        margin-bottom: 24px;
+      }
+
+      .ant-input-affix-wrapper {
+        border-radius: 8px;
+        height: 48px;
+        padding: 4px 16px;
+        transition: all 0.3s ease;
+
+        &:hover, &:focus {
+          border-color: #1890ff;
+          box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.1);
+        }
+
+        .ant-input {
+          font-size: 16px;
+        }
+      }
+
+      .ant-btn {
+        width: 100%;
+        height: 48px;
+        border-radius: 8px;
+        font-size: 16px;
+        font-weight: 500;
+      }
+
+      .login-form-forgot {
+        float: right;
+        color: #1890ff;
+        
+        &:hover {
+          color: #40a9ff;
+        }
+      }
+
+      .register-link {
+        text-align: center;
+        margin-top: 16px;
+        font-size: 14px;
+        color: #666;
+
+        a {
+          color: #1890ff;
+          margin-left: 4px;
+          
+          &:hover {
+            color: #40a9ff;
+          }
+        }
+      }
+
+      .ant-checkbox-wrapper {
+        color: #666;
+      }
+
+      .ant-form-item-explain-error {
+        font-size: 13px;
+        margin-top: 4px;
+      }
+    }
+  }
+}

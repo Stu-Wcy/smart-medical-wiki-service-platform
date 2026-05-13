@@ -1,0 +1,222 @@
+.dashboard {
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+
+    h2 {
+      margin: 0;
+      color: rgba(0, 0, 0, 0.85);
+      font-weight: 500;
+    }
+
+    .controls {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  .statsRow,
+  .businessRow {
+    margin-bottom: 24px;
+  }
+
+  .statCard {
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s;
+    border: 1px solid #f0f0f0;
+
+    &:hover {
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+      transform: translateY(-2px);
+    }
+
+    :global {
+      .ant-statistic {
+        .ant-statistic-title {
+          color: rgba(0, 0, 0, 0.65);
+          font-size: 14px;
+          font-weight: 500;
+          margin-bottom: 8px;
+        }
+
+        .ant-statistic-content {
+          color: rgba(0, 0, 0, 0.85);
+          font-size: 28px;
+          font-weight: 600;
+          line-height: 1.2;
+        }
+      }
+    }
+
+    .statIcon {
+      color: #1890ff;
+      font-size: 20px;
+      margin-right: 8px;
+    }
+
+    .statExtra {
+      margin-top: 8px;
+
+      .todayCount {
+        font-size: 12px;
+        color: rgba(0, 0, 0, 0.45);
+        background: #f6f8fa;
+        padding: 2px 8px;
+        border-radius: 4px;
+      }
+    }
+  }
+
+  .chartsRow {
+    margin-bottom: 24px;
+  }
+
+  .chartCard {
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    border: 1px solid #f0f0f0;
+
+    :global {
+      .ant-card-head {
+        border-bottom: 1px solid #f0f0f0;
+
+        .ant-card-head-title {
+          font-size: 16px;
+          font-weight: 500;
+          color: rgba(0, 0, 0, 0.85);
+        }
+      }
+
+      .ant-card-body {
+        padding: 20px;
+      }
+    }
+
+
+  }
+
+  .distributionRow {
+    margin-bottom: 24px;
+  }
+
+  .pieCard {
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    border: 1px solid #f0f0f0;
+
+    :global {
+      .ant-card-head {
+        border-bottom: 1px solid #f0f0f0;
+
+        .ant-card-head-title {
+          font-size: 16px;
+          font-weight: 500;
+          color: rgba(0, 0, 0, 0.85);
+        }
+      }
+
+      .ant-card-body {
+        padding: 20px;
+        text-align: center;
+      }
+    }
+  }
+
+  .rankingRow {
+    margin-bottom: 24px;
+  }
+
+  .rankingCard {
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    border: 1px solid #f0f0f0;
+
+    :global {
+      .ant-card-head {
+        border-bottom: 1px solid #f0f0f0;
+
+        .ant-card-head-title {
+          font-size: 16px;
+          font-weight: 500;
+          color: rgba(0, 0, 0, 0.85);
+        }
+      }
+
+      .ant-card-body {
+        padding: 16px;
+      }
+
+      .ant-table {
+        .ant-table-thead > tr > th {
+          background: #fafafa;
+          border-bottom: 1px solid #f0f0f0;
+          font-weight: 500;
+          color: rgba(0, 0, 0, 0.85);
+        }
+
+        .ant-table-tbody > tr > td {
+          border-bottom: 1px solid #f5f5f5;
+        }
+
+        .ant-table-tbody > tr:hover > td {
+          background: #f5f5f5;
+        }
+      }
+    }
+
+    .rank {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: #f0f0f0;
+      color: rgba(0, 0, 0, 0.65);
+      font-size: 12px;
+      font-weight: 500;
+
+      &.topRank {
+        background: linear-gradient(135deg, #ffd700, #ffb347);
+        color: #fff;
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+// 响应式调整
+@media (max-width: 768px) {
+  .dashboard {
+    .header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 16px;
+    }
+
+    .statCard {
+      :global {
+        .ant-statistic-content {
+          font-size: 24px;
+        }
+      }
+
+      .statIcon {
+        font-size: 18px;
+      }
+    }
+
+    .chartCard,
+    .pieCard,
+    .rankingCard {
+      :global {
+        .ant-card-body {
+          padding: 16px;
+        }
+      }
+    }
+  }
+}

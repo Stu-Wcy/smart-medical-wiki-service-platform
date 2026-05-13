@@ -1,0 +1,426 @@
+.homePage {
+  // Banner区域
+  .banner {
+    margin: -24px -24px 24px;
+    
+    .bannerItem {
+      height: 500px;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.3);
+      }
+
+      .bannerContent {
+        position: relative;
+        z-index: 1;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 100px 24px;
+        color: #fff;
+
+        h2 {
+          color: #fff;
+          font-size: 48px;
+          margin-bottom: 24px;
+        }
+
+        .ant-typography {
+          color: rgba(255, 255, 255, 0.9);
+          font-size: 20px;
+          margin-bottom: 32px;
+        }
+
+        .ant-btn {
+          height: 48px;
+          padding: 0 32px;
+          font-size: 18px;
+        }
+      }
+    }
+
+    :global {
+      .ant-carousel .slick-dots {
+        bottom: 24px;
+
+        li {
+          button {
+            background: rgba(255, 255, 255, 0.5);
+          }
+
+          &.slick-active button {
+            background: #fff;
+          }
+        }
+      }
+    }
+  }
+
+  // 数据统计
+  .statistics {
+    margin-bottom: 48px;
+
+    .ant-card {
+      text-align: center;
+      background: #f8f9fa;
+      transition: all 0.3s;
+
+      &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+
+      :global {
+        .ant-statistic-title {
+          color: rgba(0, 0, 0, 0.65);
+          font-size: 16px;
+          margin-bottom: 8px;
+        }
+
+        .ant-statistic-content {
+          color: #1890ff;
+          font-size: 24px;
+
+          .anticon {
+            margin-right: 8px;
+          }
+        }
+      }
+    }
+  }
+
+  // 热门医院
+  .hospitals {
+    margin-bottom: 48px;
+    max-width: 1200px;
+    margin: 0 auto 48px;
+    padding: 0 24px;
+
+    .sectionTitle {
+      text-align: center;
+      margin-bottom: 40px;
+
+      &::after {
+        content: '';
+        display: block;
+        width: 40px;
+        height: 3px;
+        background: #1890ff;
+        margin: 16px auto 0;
+      }
+    }
+
+    .hospitalCard {
+      height: 100%;
+      transition: all 0.3s;
+      cursor: pointer;
+
+      &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+
+        .hospitalImage img {
+          transform: scale(1.05);
+        }
+      }
+
+      .hospitalImage {
+        height: 200px;
+        overflow: hidden;
+
+        img {
+          transition: transform 0.3s ease;
+        }
+      }
+
+      .hospitalImagePlaceholder {
+        height: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #f5f5f5;
+      }
+
+      .hospitalTitle {
+        .hospitalName {
+          font-size: 16px;
+          font-weight: 500;
+          color: rgba(0, 0, 0, 0.85);
+          margin-bottom: 8px;
+          display: -webkit-box;
+          -webkit-line-clamp: 1;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          text-overflow: ellipsis;
+
+          &:hover {
+            color: #1890ff;
+          }
+        }
+
+        .hospitalTags {
+          display: flex;
+          gap: 4px;
+          flex-wrap: wrap;
+        }
+      }
+
+      .hospitalInfo {
+        .hospitalAddress {
+          color: rgba(0, 0, 0, 0.65);
+          font-size: 13px;
+          margin-bottom: 4px;
+          display: -webkit-box;
+          -webkit-line-clamp: 1;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+
+        .hospitalPhone {
+          color: rgba(0, 0, 0, 0.65);
+          font-size: 13px;
+          margin-bottom: 8px;
+        }
+
+        .hospitalDesc {
+          color: rgba(0, 0, 0, 0.45);
+          font-size: 12px;
+          line-height: 1.5;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 2;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+      }
+
+      :global {
+        .ant-card-meta {
+          padding: 16px 0 4px;
+        }
+      }
+    }
+  }
+
+  // 意见反馈
+  .feedback {
+    margin-bottom: 48px;
+    max-width: 1200px;
+    margin: 0 auto 48px;
+    padding: 0 24px;
+
+    .sectionTitle {
+      text-align: center;
+      margin-bottom: 40px;
+
+      &::after {
+        content: '';
+        display: block;
+        width: 40px;
+        height: 3px;
+        background: #1890ff;
+        margin: 16px auto 0;
+      }
+    }
+
+    .feedbackCard {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      transition: all 0.3s;
+
+      &:hover {
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+      }
+    }
+
+    .feedbackInfo {
+      padding: 24px 0;
+
+      h3.ant-typography {
+        color: #1890ff;
+        margin-bottom: 16px;
+      }
+
+      .ant-typography {
+        color: rgba(0, 0, 0, 0.65);
+        margin-bottom: 24px;
+      }
+
+      .feedbackTips {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+          position: relative;
+          padding-left: 20px;
+          margin-bottom: 12px;
+          color: rgba(0, 0, 0, 0.45);
+
+          &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 8px;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: #1890ff;
+          }
+        }
+      }
+    }
+
+    .feedbackForm {
+      padding: 24px 0;
+
+      :global {
+        .ant-form-item-label > label {
+          font-weight: 500;
+          font-size: 16px;
+        }
+
+        .ant-input-textarea {
+          border-radius: 4px;
+          
+          textarea {
+            padding: 12px;
+            font-size: 14px;
+          }
+        }
+
+        .ant-select {
+          width: 100%;
+
+          .ant-select-selector {
+            height: 40px;
+            padding: 4px 12px;
+            
+            .ant-select-selection-item {
+              line-height: 32px;
+            }
+          }
+        }
+
+        .ant-btn {
+          padding: 0 32px;
+          height: 44px;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+
+// 响应式调整
+@media (max-width: 768px) {
+  .homePage {
+    .banner {
+      .bannerItem {
+        height: 300px;
+
+        .bannerContent {
+          padding: 60px 16px;
+
+          h2 {
+            font-size: 32px;
+            margin-bottom: 16px;
+          }
+
+          .ant-typography {
+            font-size: 16px;
+            margin-bottom: 24px;
+          }
+
+          .ant-btn {
+            height: 40px;
+            padding: 0 24px;
+            font-size: 16px;
+          }
+        }
+      }
+    }
+
+    .statistics {
+      margin-bottom: 32px;
+    }
+
+    .hospitals {
+      margin-bottom: 32px;
+      padding: 0 16px;
+
+      .sectionTitle {
+        margin-bottom: 24px;
+      }
+
+      .hospitalCard {
+        .hospitalImage,
+        .hospitalImagePlaceholder {
+          height: 160px;
+        }
+
+        .hospitalTitle {
+          .hospitalName {
+            font-size: 15px;
+          }
+        }
+
+        .hospitalInfo {
+          .hospitalAddress,
+          .hospitalPhone {
+            font-size: 12px;
+          }
+
+          .hospitalDesc {
+            font-size: 11px;
+          }
+        }
+      }
+    }
+
+    .feedback {
+      margin-bottom: 32px;
+      padding: 0 16px;
+
+      .sectionTitle {
+        margin-bottom: 24px;
+      }
+
+      .feedbackInfo {
+        padding: 16px 0;
+        text-align: center;
+
+        .feedbackTips {
+          display: inline-block;
+          text-align: left;
+        }
+      }
+
+      .feedbackForm {
+        padding: 16px 0;
+      }
+
+      :global {
+        .ant-form-item-label > label {
+          font-size: 14px;
+        }
+
+        .ant-btn {
+          width: 100%;
+          height: 40px;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+} 

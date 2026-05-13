@@ -1,0 +1,37 @@
+.users {
+  .toolbar {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+  }
+}
+
+.userDetail {
+  .avatar {
+    text-align: center;
+    margin-bottom: 24px;
+
+    .avatarImage {
+      width: 100px;
+      height: 100px;
+      margin-bottom: 16px;
+    }
+
+    .username {
+      font-size: 20px;
+      font-weight: 500;
+      margin: 0;
+    }
+  }
+
+  :global {
+    .ant-descriptions {
+      background-color: #fff;
+      
+      .ant-descriptions-item-label {
+        width: 100px;
+        background-color: #fafafa;
+      }
+    }
+  }
+} 
